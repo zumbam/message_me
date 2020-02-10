@@ -13,10 +13,13 @@ require("channels")
 // require("fomantic-ui")
 // import only functionallity which is needed
 import dropdown from "fomantic-ui"
+import sidebar from "fomantic-ui"
 
 $(document).on('turbolinks:load',function(){
   $('div.ui.dropdown').dropdown();
 })
+
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
