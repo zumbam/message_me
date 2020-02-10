@@ -7,34 +7,16 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui feed" wfd-id="81">
-          <div class="event" wfd-id="91">
-            <div class="content" wfd-id="92">
-              <div class="summary" wfd-id="93">
-                 <em>Elliot Fu:</em> Hey there how are u?
+          <% @messages.sort_by(&:created_at).each do |m| %>
+            <!-- iterating through the messages sorted_by it's created_at time-->
+            <div class="event" wfd-id="91">
+              <div class="content" wfd-id="92">
+                <div class="summary" wfd-id="93">
+                  <em><%="#{m.user.username}:"%> </em> <%="#{m.body}"%>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="event" wfd-id="88">
-            <div class="content" wfd-id="89">
-              <div class="summary" wfd-id="90">
-                 <em>Stevie Feliciano:</em> Fine and how are you Troy?
-              </div>
-            </div>
-          </div>
-          <div class="event" wfd-id="85">
-            <div class="content" wfd-id="86">
-              <div class="summary" wfd-id="87">
-                 <em>Helen Troy:</em> Fine but quite busy.
-              </div>
-            </div>
-          </div>
-          <div class="event" wfd-id="82">
-            <div class="content" wfd-id="83">
-              <div class="summary" wfd-id="84">
-                 <em>Christian Rocha:</em> Hey there!
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
       <div class="extra content">
