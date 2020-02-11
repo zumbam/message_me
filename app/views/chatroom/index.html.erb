@@ -11,15 +11,19 @@
         </div>
       </div>
       <div class="extra content">
-        <form class="ui reply form" wfd-id="196">
-          <div class="field" wfd-id="198">
+        <%= form_for @message, html: {class: "ui reply form", role: "form"}, url: messages_path, method: :post do |f| %>
+          <div class="field">
             <div class="ui fluid icon input">
-              <input type="text" placeholder="Message" wfd-id="180">
-              <i class="bordered inverted orange edit icon"></i>
+              <%= f.text_field :body, placeholder: "message" %>
+
+                <%=  f.button '<i class="bordered inverted orange edit icon"> </i>'.html_safe %>
+
+
+
             </div>
           </div>
 
-        </form>
+        <% end %>
       </div>
     </div>
   </div>

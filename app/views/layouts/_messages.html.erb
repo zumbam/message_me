@@ -1,0 +1,12 @@
+<% unless flash.empty? %>
+  <div class="ui container mb-20">
+    <% flash.each do |type, content| %>
+      <div class="ui <%= type %> message" >
+        <i class="close icon"></i>
+        <div class="header">
+          <%= content %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
