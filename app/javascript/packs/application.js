@@ -12,8 +12,11 @@ require("channels")
 // require("jquery")
 // require("fomantic-ui")
 // import only functionallity which is needed
-import dropdown from "fomantic-ui"
-import sidebar from "fomantic-ui"
+// import dropdown from "fomantic-ui"
+// import sidebar from "fomantic-ui"
+import "fomantic-ui"
+import scroll_bottom from "./utils"
+
 
 $(document).on('turbolinks:load',function(){
   $('div.ui.dropdown').dropdown();
@@ -21,10 +24,9 @@ $(document).on('turbolinks:load',function(){
   .on('click', function() {
     $(this)
       .closest('.message')
-      .transition('fade')
-    ;
-  })
-;
+      .transition('fade');
+  });
+  scroll_bottom();
 })
 
 

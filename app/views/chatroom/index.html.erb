@@ -4,32 +4,22 @@
 </h4>
 <div class="ui two column grid">
   <div class="twelve wide column">
-    <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui feed" wfd-id="81">
+    <div class="ui fluid raised card">
+      <div class="content chatbox" id='messages'>
+        <div class="ui feed" id="messages-container">
           <%= render @messages %>
         </div>
       </div>
       <div class="extra content">
-        <%= form_for @message, html: {class: "ui reply form", role: "form"}, url: messages_path, method: :post do |f| %>
-          <div class="field">
-            <div class="ui fluid icon input">
-              <%= f.text_field :body, placeholder: "message" %>
-
-                <%=  f.button '<i class="bordered inverted orange edit icon"> </i>'.html_safe %>
-
-
-
-            </div>
-          </div>
-
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, method: :post, remote: true) do |f| %>
+          <%= f.text_field :body, class: "ui fluid input", placeholder: "message" %>
         <% end %>
       </div>
     </div>
   </div>
-  <div class="four wide column">
-    <div class="ui fluid raised card chatbox">
-      <div class="content">
+  <div class="four wide column chatbox">
+    <div class="ui fluid raised card">
+      <div class="content chatbox">
         <div class="ui inverted vertical menu" wfd-id="162">
           <a class="item">
             Home
