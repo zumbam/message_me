@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import("fomantic-ui/semantic")
+import("semantic")
 import scroll_bottom from "./utils"
 
 
