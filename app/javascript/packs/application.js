@@ -7,14 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
-// jquery is include in fomantic-ui
-// require("jquery")
-// require("fomantic-ui")
-// import only functionallity which is needed
-// import dropdown from "fomantic-ui"
-// import sidebar from "fomantic-ui"
-import "fomantic-ui"
+import("fomantic-ui/semantic")
 import scroll_bottom from "./utils"
 
 
