@@ -109,4 +109,7 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  config.action_cable.allowed_request_origins = ['https://message-me-zumbam.herokuapp.com']
+  # config.action_cable.allowed_request_origins = ['redis://h:p1db37f6b96b4aeaa934feb07f5caf3ab47aaa2b52d264510ddec976379363549@ec2-34-200-202-214.compute-1.amazonaws.com:17629']
 end
