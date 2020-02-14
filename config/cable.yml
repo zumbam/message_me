@@ -1,8 +1,8 @@
 development:
   adapter: async
 
-staging:
-  adapter: async
+# staging:
+#   adapter: async
 
 test:
   adapter: test
